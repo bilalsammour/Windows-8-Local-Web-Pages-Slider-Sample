@@ -34,11 +34,9 @@ namespace LocalWebPagesSlider
             WebStream = new StreamUriWinRTResolver(folder);
         }
 
-        public static async Task<StorageFolder> GetHtnmlFolder()
+        private static async Task<StorageFolder> GetHtnmlFolder()
         {
-            StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
-
-            StorageFolder htmlFolder = await local.CreateFolderAsync(FOLDER_NAME, CreationCollisionOption.OpenIfExists);
+            StorageFolder htmlFolder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(FOLDER_NAME);
 
             return htmlFolder;
         }

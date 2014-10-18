@@ -19,6 +19,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomControls\ArticleControl.xaml.cs">
+      <DependentUpon>ArticleControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)DataLoader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DataModel\SampleDataSource.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DataModel\WebPageItem.cs" />
@@ -31,5 +34,13 @@
     <Content Include="$(MSBuildThisFileDirectory)Html\WebPage1.html" />
     <Content Include="$(MSBuildThisFileDirectory)Html\WebPage2.html" />
     <Content Include="$(MSBuildThisFileDirectory)Html\WebPage3.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)CustomControls\ArticleControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Templates\OneArticleTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 </Project>
