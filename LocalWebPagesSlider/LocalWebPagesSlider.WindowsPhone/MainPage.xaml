@@ -20,8 +20,18 @@
         </Grid.ChildrenTransitions>
 
         <!--TODO: Content should be placed within the following grid-->
-        <Grid x:Name="ContentRoot" Margin="19,9.5,19,0">
-            <Pivot x:Name="allArticles" ItemsSource="{Binding WebPages}" ItemTemplate="{StaticResource OneArticleTemplate}"/>
+        <Grid x:Name="ContentRoot" Margin="0,9.5,0,0">
+            <Pivot x:Name="allArticles" ItemsSource="{Binding WebPages}" ItemTemplate="{StaticResource OneArticleTemplate}" Style="{StaticResource PivotWithoutTabsStyle}"/>
         </Grid>
     </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar IsSticky="True" x:Name="appBar">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:Name="previousStep" Icon="Previous" Click="previousStep_Click" Label="Previous"/>
+
+                <AppBarButton x:Name="nextStep" Icon="Next" Click="nextStep_Click" Label="Next"/>
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>

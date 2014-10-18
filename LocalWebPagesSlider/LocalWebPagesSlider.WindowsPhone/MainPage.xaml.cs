@@ -1,5 +1,6 @@
 ﻿using LocalWebPagesSlider.Common;
 using System;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
@@ -67,6 +68,26 @@ namespace LocalWebPagesSlider
         /// serializable state.</param>
         private void NavigationHelper_SaveState(object sender, SaveStateEventArgs e)
         {
+        }
+
+        private void previousStep_Click(object sender, RoutedEventArgs e)
+        {
+            int selectedIndex = allArticles.SelectedIndex;
+            int count = allArticles.Items.Count;
+
+            int newSelectedIndex = selectedIndex == 0 ? count - 1 : selectedIndex - 1;
+
+            allArticles.SelectedIndex = newSelectedIndex;
+        }
+
+        private void nextStep_Click(object sender, RoutedEventArgs e)
+        {
+            int selectedIndex = allArticles.SelectedIndex;
+            int count = allArticles.Items.Count;
+
+            int newSelectedIndex = (selectedIndex + 1) % count;
+
+            allArticles.SelectedIndex = newSelectedIndex;
         }
 
         #region NavigationHelper registration
