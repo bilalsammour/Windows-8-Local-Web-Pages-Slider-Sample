@@ -1,0 +1,16 @@
+﻿{
+    "WebPages": [
+        {
+            "Title": "Web Page 1",
+            "FileName": "WebPage1.html"
+        },
+        {
+            "Title": "Web Page 2",
+            "FileName": "WebPage2.html"
+        },
+        {
+            "Title": "Web Page 3",
+            "FileName": "WebPage3.html"
+        }
+    ]
+}

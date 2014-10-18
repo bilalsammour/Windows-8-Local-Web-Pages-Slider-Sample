@@ -15,11 +15,18 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\SampleDataSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\WebPageItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StreamUriWinRTResolver.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)DataModel\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)DataModel\SampleData.json" />
     <Content Include="$(MSBuildThisFileDirectory)Html\FunnyBaby.jpg" />
     <Content Include="$(MSBuildThisFileDirectory)Html\WebPage1.html" />
     <Content Include="$(MSBuildThisFileDirectory)Html\WebPage2.html" />
