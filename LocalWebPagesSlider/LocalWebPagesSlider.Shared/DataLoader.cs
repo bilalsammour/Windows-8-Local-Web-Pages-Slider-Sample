@@ -13,7 +13,7 @@ namespace LocalWebPagesSlider
 
         public static StreamUriWinRTResolver WebStream { get; set; }
 
-        public async Task Start(ObservableDictionary defaultViewModel)
+        public static async Task Start(ObservableDictionary defaultViewModel)
         {
             SampleDataSource sampleDataSource = await LoadData();
             await InitWebStream();
@@ -28,13 +28,13 @@ namespace LocalWebPagesSlider
             return sampleDataSource;
         }
 
-        private async Task InitWebStream()
+        private static async Task InitWebStream()
         {
             var folder = await GetHtnmlFolder();
             WebStream = new StreamUriWinRTResolver(folder);
         }
 
-        public async Task<StorageFolder> GetHtnmlFolder()
+        public static async Task<StorageFolder> GetHtnmlFolder()
         {
             StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
 
