@@ -50,7 +50,7 @@ Operating system requirements
 Developed By
 ------------
 
-Bilal Sammour - bilalsammour@gmail.com
+Bilal Sammour - bilal@startappz.com
 
 
 License
